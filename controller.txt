@@ -1,0 +1,19 @@
+package sample;
+
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+public class Controller {
+    public Button btnMain;
+    public int clickCounter;
+    public TextField txtLicznik;
+
+
+    public void onMainBtnAction(ActionEvent actionEvent) {
+        clickCounter++;
+        if(clickCounter == 1){
+            btnMain.setText("I jeszcze raz!");
+        }
+        txtLicznik.setText("Kliknięto: " + clickCounter + " razy");
+    }
